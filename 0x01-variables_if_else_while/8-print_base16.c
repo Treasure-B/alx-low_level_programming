@@ -10,7 +10,8 @@ int main(void)
 int n;
 char cbet;
 
-cbet = 'a'
+cbet = 'a';
+n = 0;
 while
 (n < 10)
 {
