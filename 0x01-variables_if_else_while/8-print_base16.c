@@ -7,18 +7,22 @@
  */
 int main(void)
 {
-	int n;
-	char cbet;
+int n;
+char cbet;
 
-	for (cbet = 48; n < 58; n++)
-	{
-		putchar(n);
-	}
-	for (cbet = 'a'; cbet <= 'f'; cbet++)
-	{
-		putchar(cbet);
-	}
-	putchar('\n');
-	return (0);
+cbet = 'a'
+while
+(n < 10)
+{
+putchar(n + '0');
+n++;
 }
-
+while
+(cbet <= 'f')
+{
+putchar(cbet);
+cbet++;
+}
+putchar('\n');
+return (0);
+}
