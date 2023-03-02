@@ -10,27 +10,22 @@
 
 char *rot13(char *str)
 {
-char *result = malloc(strlen(str) + 1);
-int i, j;
+int i;
+	int j;
+	char data1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char datarot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-for (i = 0, j = 0; str[i] != '\0'; i++, j++)
-{
-char c = str[i];
-
-if (c >= 'a' && c <= 'z')
-{
-c = ((c - 'a') + 13) % 26 + 'a';
-}
-else if (c >= 'A' && c <= 'Z')
-{
-c = ((c - 'A') + 13) % 26 + 'A';
-}
-
-result[j] = c;
-}
-
-result[j] = '\0';
-
-return (result);
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		for (j = 0; j < 52; j++)
+		{
+			if (str[i] == data1[j])
+			{
+				str[i] = datarot[j];
+				break;
+			}
+		}
+	}
+	return (str);
 }
 
