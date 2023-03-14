@@ -10,16 +10,22 @@
 
 char *_strdup(char *str)
 {
+char *tre;
+
+int i, x = 0;
+
 if (str == NULL)
-{
 return (NULL);
-}
-int len = strlen(str);
-char *new_str = (char *) malloc(len + 1);
-if (new_str == NULL)
-{
+i = 0;
+while (str[i] != '\0')
+i++;
+tre = malloc(sizeof(char) * (i + 1));
+
+if (tre == NULL)
 return (NULL);
-}
-strcpy(new_str, str);
-return (new_str);
+
+for (x = 0; str[x]; x++)
+tre[x] = str[x];
+
+return (tre);
 }
