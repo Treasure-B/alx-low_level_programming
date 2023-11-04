@@ -22,6 +22,7 @@ if (hash_table->array == NULL)
 {
 free(hash_table);
 return (NULL);
+}
 
 return (hash_table);
 }
