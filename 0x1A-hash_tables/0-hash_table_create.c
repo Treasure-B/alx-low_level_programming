@@ -22,13 +22,7 @@ if (hash_table->array == NULL)
 {
 free(hash_table);
 return (NULL);
-}
 
-/** for (unsigned long int j = 0; j < size; j++)
-{
-hash_table->array[j] = NULL;
-}
-*/
 return (hash_table);
 }
 
